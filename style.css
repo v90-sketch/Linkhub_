@@ -1,8 +1,57 @@
+
 body{
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: "Ubuntu", sans-serif;
     font-weight: 300;
     font-style: italic;
+    background: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+body.dark-theme{
+    --bg: #1f2028;
+    --card-bg: #2a2c39;
+    --text: #f2f2f7;
+    --muted: #c1c1d0;
+    --button-bg: #8b5cf6;
+    --button-text: #ffffff;
+}
+
+.theme-toggle{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 999px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    font-size: 0.95rem;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card{
+    text-align: center;
+    background: var(--card-bg);
+    padding: 30px 28px;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.links a,
+.btn{
+    text-decoration: none;
+}
+
 .avatar{
     width: 100px;
     border-radius: 100%;
